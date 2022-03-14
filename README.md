@@ -13,4 +13,6 @@ This monitoring strategy produces a sequence of one-step forecasts, which can be
 
 As a measure of performance of the models, we will use the mean absolute percentage error (MAPE). 
 
+The analysis can be found in the jupyter notebook [Pollution-times-series.ipynb](https://github.com/jankova/Time-Series-ARIMA-vs-LSTM/blob/main/Pollution-times-series.ipynb).
+
 
