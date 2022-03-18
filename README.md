@@ -4,15 +4,11 @@ We compare the performance of traditional ARIMA models and Recurrent Neural Netw
 
 There are numerous ways of formulating a time series forecasting problem depending on the business scenario.
 
-We simulate two scenarios. In both scenarios a time series model is trained and deployed, and we monitor its test performance over time. 
+We simulate a scenario where a time series model is trained and deployed, and we monitor its test performance over time. 
 The model is not retrained during this testing phase.
+We produce a one-step forecast at each time step t and we observe a new data point that is added to the training dataset to compute the next step forecast.
 
-1. **One-step moving origin forecasting**: 
- We produce a one-step forecast at each time step t and we observe a new data point that is added to the training dataset to compute the next step forecast. This is called 'moving origin' since we always observe a new data point at time t and thus the model is using only true historical data for every one-step forecast.
-
-2. **Fixed origin forecasting:** Fixed origin means that the forecast we make at time step t will be added to the training dataset to compute the forecast at step t+1. This problem formulation is arguably more challenging than (1) as the model is using its own forecasts to generate further forecasts. 
-
-Both monitoring strategies produce a sequence of one-step forecasts, which can be compared against the true test observations. 
+This monitoring strategy produce a sequence of one-step forecasts, which can be compared against the true test observations. 
 
 As a measure of performance of the models, we use **MAPE** (mean absolute percentage error). 
 
