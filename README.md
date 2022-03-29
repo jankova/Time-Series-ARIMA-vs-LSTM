@@ -1,18 +1,10 @@
 # Comparison of ARIMA and LSTM for time series forecasting
 
-We compare the performance of traditional ARIMA models and Recurrent Neural Networks (LSTMs) for time series forecasting.
+The goal is to compare performance of traditional ARIMA models and Recurrent Neural Networks (LSTMs) for time series forecasting. 
 
-There are numerous ways of formulating a time series forecasting problem depending on the business scenario.
+This comparison is not straightforward due to the different nature of the methods and different possible formulations of the time series forecasting problem. We look at several of the most commonly used formulations.  
 
-We simulate a scenario where a time series model is trained and deployed, and we monitor its test performance over time. 
-The model is not retrained during this testing phase.
-We produce a one-step forecast at each time step t and we observe a new data point that is added to the training dataset to compute the next step forecast.
-
-This monitoring strategy produce a sequence of one-step forecasts, which can be compared against the true test observations. 
-
-As a measure of performance of the models, we use **MAPE** (mean absolute percentage error). 
-
-We perform the analysis on two datasets:
+We perform the comparison on two datasets:
 
 1. **Electricity consumption** (trend and seasonality)
 
